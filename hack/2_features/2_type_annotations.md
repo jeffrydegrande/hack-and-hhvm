@@ -18,11 +18,14 @@
 
 !SLIDE code
 
-# better
+# slightly better
 
     @@@ php 
     // PHP
     function getAge(Person $person) {}
+
+    // ... but what about primitive types?
+    function convertToMetric(float $pound) {}
 
 !SLIDE code
 

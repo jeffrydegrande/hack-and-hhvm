@@ -2,7 +2,7 @@
 
 # Features #
 
-!SLIDE bullets incremental small
+!SLIDE bullets small
 
 * Type Annotations
 * Generics
@@ -10,4 +10,4 @@
 * Collections
 * Shapes
 * XHP
-* Async
+* Type aliasing

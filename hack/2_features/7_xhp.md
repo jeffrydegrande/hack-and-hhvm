@@ -7,7 +7,7 @@
 * html in code \o/
 * automatically escaped
 * valid markup enforced at compile time
-* dynamic structures
+* dynamic elements
 * custom elements
 * custom attributes
 * define element structure
@@ -28,6 +28,7 @@
 !SLIDE code
 
 # dynamic elements
+# Gelijk nen DOM
 
     @@@ php
 
@@ -79,6 +80,7 @@
           <div class={$this->getAttribute("type")}>
             <h1>{$this->getAttribute("title")}</h1>
             <div class="body">
+              {$this->getChildren()}
             </div>
           </div>
         }

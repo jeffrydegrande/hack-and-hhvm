@@ -17,25 +17,84 @@
 
     // UNSAFE
 
-!SLIDE commandline
+!SLIDE code smaller
 
-$ cd ~/Code/Engagor/engagor
+# STEP 1: run hackificator script
 
-$ hackification
+    @@@ php
 
-... this takes forever
+    <?php
+    class Person {
+      private $name;
 
-!SLIDE
+      function __construct($name = null) {
+        $this->name = $name;
+      }
+    }
 
-* *hackification* script converts your project
-* tries to apply the most restrictive mode that doesn't throw errors
+    function main() {
+      $person = new Person("Jeffry");
+    }
 
-!SLIDE
+    //
+    // after running $ hackificator .
+    //
 
-# Going forward
+    <?hh 
+    class Person {
+      private $name;
 
-* files with <?php continue working
-* manually convert them to <?hh, fix errors
-* add annotations
-* try to get to // strict 
-* not always possible though (dynamic stuff, stuff that has a main())
+      function __construct($name = null) {
+        $this->name = $name;
+      }
+    }
+
+    function main() {
+      $person = new Person("Jeffry");
+    }
+
+!SLIDE bullets small
+
+# hackificator does a few more small things
+
+* adding nullables where needed
+* adding empty parameter list on constructors. i.e. new Thing => new Thing()
+
+
+!SLIDE code smaller
+
+# STEP 2: inferring type annotations
+# aka soft type annotations
+
+    @@@ php
+
+    // after running $ hh_server --convert <dir> <rootdir>
+
+    <?hh 
+
+      class Person {
+        private ?string $name;
+
+        public function __construct(@?string $name = null) {
+          $this->name = $name;
+        }
+      }
+
+      function main(): @void {
+        $person = new Person("Jeffry");
+      }
+
+
+!SLIDE bullets small
+
+* soft types are self-consistent and don't cause type errors
+* they may be wrong
+* @T is kind of like PHP's error suppression.
+* No hard failure but errors do get logged
+
+!SLIDE bullets small
+
+* STEP 3 (final): "hardening" type annotations 
+* `hack_remove_soft_types --harden`
+* has a --delete-from-log
+* annotations are now hard failures

@@ -6,34 +6,26 @@
 
 # HipHop #
 
-* PHP => C++
-* FAST
-* slow development cycle
+* Release 2010
+* PHP compiled to C++
+* fast code, slow development cycle
 
 !SLIDE bullets
 
 # HHVM #
 
-* JIT compiler + VM
-* runs PHP
-* php modules (the important ones) are available (curl, mysqli, ..)
-
-!SLIDE bullets incremental
-
-# performance #
-
-* Supposed to be fast
-* 300% improvement vs 5.3
-* 200% improvement vs 5.5
-* One dude reported having benchmarked his code at 5x original speed
+* Hack & PHP VM
+* PHP => bytecode => x64 machine code
+* fast, 300% vs 5.3, 200% vs 5.5
+* 9x improvement on fb's workload
+* facebook.com running on HHVM since Q1 2013
 
 !SLIDE bullets smaller
 
 # Hack #
 
 * language on top of HHVM
-* interoperates seamlessly with PHP
-* cleaner, safer & refactorable code
-* annotate code + tool to validate those annotations
-* lots and lots of cool features
-* type checking is done **before** runtime and is **not** enforced at runtime.
+* seamless interoperability with PHP
+* safer programming due to static typing
+* instantaneous type checking via local server that watches the filesystem
+* lots of extra features
