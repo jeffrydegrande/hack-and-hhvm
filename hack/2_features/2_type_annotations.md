@@ -16,7 +16,7 @@
     getAge(true); // BOOM in production
     getAge(new Person()); // :)
 
-!SLIDE code
+!SLIDE code small
 
 # slightly better
 
@@ -26,6 +26,10 @@
 
     // ... but what about primitive types?
     function convertToMetric(float $pound) {}
+
+    // type hints for scalar types were implemented around May 2010, 
+    // but never made it into 5.4.
+    // "against fundamental design of PHP". Meh
 
 !SLIDE code
 
