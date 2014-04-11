@@ -2,7 +2,7 @@
 
 # Collections #
 
-!SLIDE bullet
+!SLIDE bullets
 
 * Vector
 * Map

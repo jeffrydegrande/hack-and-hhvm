@@ -6,7 +6,7 @@
 
 # HipHop #
 
-* Release 2010
+* Released in 2010
 * PHP compiled to C++
 * fast code, slow development cycle
 
@@ -16,9 +16,9 @@
 
 * Hack & PHP VM
 * PHP => bytecode => x64 machine code
-* fast, 300% vs 5.3, 200% vs 5.5
+* **fast**, 300% vs 5.3, 200% vs 5.5
 * 9x improvement on fb's workload
-* facebook.com running on HHVM since Q1 2013
+* facebook.com running HHVM since Q1 2013
 
 !SLIDE bullets smaller
 

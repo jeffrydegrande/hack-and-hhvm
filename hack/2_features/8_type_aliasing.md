@@ -34,7 +34,7 @@
         return time();
       }
 
-      function in_local_tz(TIMESTAMP_IN_UTC $timestamp) {
+      function in_local_tz(TIMESTAMP_IN_UTC $timestamp): int {
         $offset = blahblah();
         return $timestamp - $offset;
       }
@@ -46,3 +46,5 @@
 
       in_local_tz(time()); // typechecker complains
       in_local_tz(123); // here too
+      
+      in_local_tz(time_in_utc()); // works

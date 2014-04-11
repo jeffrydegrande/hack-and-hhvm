@@ -4,10 +4,10 @@
 
 !SLIDE bullets incremental
 
-* html in code \o/
+* html added to php grammar
 * automatically escaped
-* valid markup enforced at compile time
-* dynamic elements
+* valid markup is enforced
+* build up markup dynamically
 * custom elements
 * custom attributes
 * define element structure
@@ -25,10 +25,10 @@
         <a href={$like_link}>Like</a>
       </div>;
 
-!SLIDE code
+!SLIDE code small
 
-# dynamic elements
-# Gelijk nen DOM
+# build up markup dynamically
+# gelijk nen DOM
 
     @@@ php
 
