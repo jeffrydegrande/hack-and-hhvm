@@ -19,7 +19,7 @@ purpose
       dotProduct(shape('x' => 3, 'y' => 3),
                  shape('x' => 4, 'y' => 4));
 
-      // so crazy things like this won't get passed 
+      // so funky stuff like this won't be allowed to pass 
       // the type checker and kill puppies
 
       dotProduct(array('x' => 'foo', 'y' => 'foo'),
@@ -29,4 +29,4 @@ purpose
       type Point<T> = shape('x' => T, 'y' => T);
 
       shape('x' => 1.0, 'y' => 2.0);
-      shaep('x' => 1, 'y' => 2);
+      shape('x' => 1, 'y' => 2);
